@@ -36,7 +36,23 @@ public class CalculatorTest {
  public void testDivideWithTolerance() {
   double result = calc.divide(345, 100);
   assertEquals(3.4, result, 0.1);
-   
+ }
+
+ @Test
+ public void testSum() {
+  double result = calc.sum(33, 36);
+  assertEquals(69, result, 0);
+ }
+
+ @Test
+ public void testSubstractA() {
+  double result = calc.substract(60, 29);
+  assertEquals(31, result, 0);
+ }
+
+ @Test (expected = ArithmeticException.class)
+ public void testSubstractB() {
+  double result = calc.substract(29, 60);
  }
   
  @Test(expected = ArithmeticException.class)
