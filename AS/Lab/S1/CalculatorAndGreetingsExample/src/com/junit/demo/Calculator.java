@@ -22,4 +22,16 @@ public class Calculator {
 			 }
 			 return a - b;
 		 }
-		}
+
+		 public double factorial(double a) {
+			 if (a == 0) return 1;
+			 else if (a < 0) throw new ArithmeticException();
+			 else {
+					for (double i = a-1; i > 1; i--) {
+						a = a * i;
+					}
+					return a;
+			 }
+		 }
+
+}
